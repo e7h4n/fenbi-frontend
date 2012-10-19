@@ -1,0 +1,152 @@
+# Log {
+snippet l
+	console.log("$1:", ${1:});
+snippet l'
+	console.log('-- ${1:} ----------------');
+snippet lc
+	console.count('${1}');
+# }
+
+# Require {
+snippet req
+	var ${1:} = require('${2}/$1');
+snippet reqs
+	var ${1:} = require('${2}/$1').getInstance();
+snippet bb
+	var Backbone = require('../${1}lib/backbone');
+snippet us
+	var _ = require('../${1}lib/underscore');
+snippet ma
+	var Mustache = require('../${1}lib/mustache');
+snippet jq
+	var $ = require('../${1}lib/jquery');
+# }
+
+# Split {
+snippet hr
+	/* -------------------- ${1} ----------------------- */
+snippet el
+	/* -------------------- Event Listener ----------------------- */
+snippet bo
+	/* -------------------- Backbone Options ----------------------- */
+# }
+
+# Get LoginUser
+snippet lu
+	var loginUser = require('../${1:../}util/PageData').getLoginUser();
+
+# Get CurrentUser
+snippet cu
+	var currentUser = require('../${1:../}util/PageData').getCurrentUser();
+#
+
+# Super {
+snippet super
+	${1}.prototype.${2}.apply(this, arguments);
+snippet sc
+	${1}.prototype.initialize.apply(this, arguments);
+# }
+
+# JSLint
+snippet jslint
+	/*jslint browser: true, vars: true, nomen: true, indent: 4, plusplus: true, sloppy: true*/
+	/*global define: true */
+#
+
+# File {
+
+# JavaScript source template
+snippet tmpl
+	/**
+	 * `expand("%:t")`, `strftime("%b %-d, %Y")`
+	 *
+	 * Copyright `strftime("%Y")` fenbi.com. All rights reserved.
+	 * FENBI.COM PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+	 */
+
+	/**
+	 * @author `g:snips_author`
+	 */
+
+	/*jslint browser: true, vars: true, nomen: true, indent: 4, plusplus: true, sloppy: true*/
+	/*global define: true */
+
+	define(function (require, exports) {
+		'use strict';
+
+		${1}
+	});
+
+	/* vim: set et sw=4 ts=4 sts=4: */
+#
+
+# Form validator
+snippet valid
+	/**
+	 * `expand("%:t")`, `strftime("%b %-d, %Y")`
+	 *
+	 * Copyright `strftime("%Y")` fenbi.com. All rights reserved.
+	 * FENBI.COM PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+	 */
+
+	/**
+	 * @author `g:snips_author`
+	 */
+
+	/*jslint browser: true, vars: true, nomen: true, indent: 4, plusplus: true, sloppy: true*/
+	/*global define: true */
+
+	define(function (require, exports) {
+		'use strict';
+
+		/**
+		 * @param {Object} options
+		 * @param {Number} options.error
+		 */
+		return function (options) {
+			return function (elem) {
+				var FormUtil = require('../../../util/FormUtil');
+
+				var validResult = {};
+
+				var value = FormUtil.getValue(elem);
+
+				${1}
+
+				return validResult;
+			};
+		};
+	});
+
+	/* vim: set et sw=4 ts=4 sts=4: */
+#
+
+# View
+snippet vt
+	/**
+	 * `expand("%:t")`, `strftime("%b %-d, %Y")`
+	 *
+	 * Copyright `strftime("%Y")` fenbi.com. All rights reserved.
+	 * FENBI.COM PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+	 */
+
+	/**
+	 * @author `g:snips_author`
+	 */
+
+	/*jslint browser: true, vars: true, nomen: true, indent: 4, plusplus: true, sloppy: true*/
+	/*global define: true */
+
+	define(function (require, exports) {
+		'use strict';
+
+		var Backbone = require('../../lib/backbone');
+		var ${1:} = Backbone.View.extend({
+		});
+
+		return $1;
+	});
+
+	/* vim: set et sw=4 ts=4 sts=4: */
+
+# }
