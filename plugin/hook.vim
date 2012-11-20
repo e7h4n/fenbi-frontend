@@ -1,5 +1,5 @@
 " Generate tags
-function! FileChangeHook()
+function FileChangeHook()
     let file = fnamemodify(findfile('after-file-change', '.;'), ':p')
     if executable(file)
         execute ':silent !' . file . ' ' . expand("%:p")
