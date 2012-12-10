@@ -47,12 +47,6 @@ snippet sc
 	${1}.prototype.initialize.apply(this, arguments);
 # }
 
-# JSLint
-snippet jslint
-	/*jslint browser: true, vars: true, nomen: true, indent: 4, plusplus: true, sloppy: true*/
-	/*global define: true */
-#
-
 # File {
 
 # JavaScript source template
@@ -68,16 +62,11 @@ snippet tmpl
 	 * @author `g:snips_author`
 	 */
 
-	/*jslint browser: true, vars: true, nomen: true, indent: 4, plusplus: true, sloppy: true*/
-	/*global define: true */
-
 	define(function (require, exports) {
 		'use strict';
 
 		${1}
 	});
-
-	/* vim: set et sw=4 ts=4 sts=4: */
 #
 
 # Form validator
@@ -92,9 +81,6 @@ snippet valid
 	/**
 	 * @author `g:snips_author`
 	 */
-
-	/*jslint browser: true, vars: true, nomen: true, indent: 4, plusplus: true, sloppy: true*/
-	/*global define: true */
 
 	define(function (require, exports) {
 		'use strict';
@@ -117,8 +103,6 @@ snippet valid
 			};
 		};
 	});
-
-	/* vim: set et sw=4 ts=4 sts=4: */
 #
 
 # View
@@ -134,9 +118,6 @@ snippet vt
 	 * @author `g:snips_author`
 	 */
 
-	/*jslint browser: true, vars: true, nomen: true, indent: 4, plusplus: true, sloppy: true*/
-	/*global define: true */
-
 	define(function (require, exports) {
 		'use strict';
 
@@ -146,8 +127,6 @@ snippet vt
 
 		return $1;
 	});
-
-	/* vim: set et sw=4 ts=4 sts=4: */
 # }
 # Command
 snippet cmd
