@@ -13,13 +13,13 @@ snippet req
 snippet reqs
 	var ${1:} = require('${2}/$1').getInstance();
 snippet bb
-	var Backbone = require('../${1}lib/backbone');
+	var Backbone = require('${1}../common/lib/backbone');
 snippet us
-	var _ = require('../${1}lib/underscore');
+	var _ = require('${1}../common/lib/underscore');
 snippet ma
-	var Mustache = require('../${1}lib/mustache');
+	var Mustache = require('${1}../common/lib/mustache');
 snippet jq
-	var $ = require('../${1}lib/jquery');
+	var $ = require('${1}../common/lib/jquery');
 # }
 
 # Split {
