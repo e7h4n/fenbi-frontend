@@ -1,24 +1,27 @@
 # Log {
 snippet l
-	console.log("$1:", ${1:});
+abbr consoleLog
+	console.log("$1:", ${1:});${0}
 snippet l'
+abbr consoleMark
 	console.log('-- ${1:} ----------------');
 snippet lc
+abbr consoleCount
 	console.count('${1}');
 # }
 
 # Require {
 snippet req
+abbr require
 	var ${1:} = require('${2}/$1');
-snippet reqs
-	var ${1:} = require('${2}/$1').getInstance();
 snippet bb
+abbr requireBackbone
 	var Backbone = require('${1}../common/lib/backbone');
 snippet us
+abbr requireUnderscore
 	var _ = require('${1}../common/lib/underscore');
-snippet ma
-	var Mustache = require('${1}../common/lib/mustache');
 snippet jq
+abbr requireJQuery
 	var $ = require('${1}../common/lib/jquery');
 # }
 
