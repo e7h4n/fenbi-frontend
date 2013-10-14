@@ -1,10 +1,10 @@
 # Log {
 snippet l
 abbr consoleLog
-	console.debug("$1:", ${1:});${0}
+	console[console.debug ? 'debug' : 'log']("$1:", ${1:});${0}
 snippet l'
 abbr consoleMark
-	console.debug('-- ${1:} ----------------');
+	console[console.debug ? 'debug' : 'log']('-- ${1:} ----------------');
 snippet lc
 abbr consoleCount
 	console.count('${1}');
@@ -138,4 +138,23 @@ snippet cmd
 # err
 snippet err
 	var errorMessage = require('${1}../../util/Message').error('${2}');
+# }
+
+# request
+snippet request
+	var loading = require('../../common/util/Message').loading('${1}');
+
+	request.always(function () {
+		loading.hide();
+	});
+
+	request.done(function (resp) {
+		console[console.debug ? 'debug' : 'log']("resp:", resp);
+	});
+
+	request.fail(function (xhr) {
+		require('../../common/util/ExceptionUtil').alert(null, {
+			xhr: xhr
+		});
+	});
 # }
