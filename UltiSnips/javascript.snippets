@@ -1,0 +1,47 @@
+snippet l
+console[console.debug ? 'debug' : 'log']("$1:", ${1:});${0}
+endsnippet
+
+snippet l'
+console[console.debug ? 'debug' : 'log']('-- ${1:} ----------------');
+endsnippet
+
+snippet lc
+console.count('${1}');
+endsnippet
+
+snippet req
+var ${1:} = require('${2}$1');
+endsnippet
+
+snippet bb
+var Backbone = require('${1}../common/lib/backbone');
+endsnippet
+
+snippet us
+var _ = require('${1}../common/lib/underscore');
+endsnippet
+
+snippet jq
+var $ = require('${1}../common/lib/jquery');
+endsnippet
+
+snippet hr
+/* -------------------- ${1} ----------------------- */
+endsnippet
+
+snippet el
+/* -------------------- Event Listener ----------------------- */
+endsnippet
+
+snippet bo
+/* -------------------- Backbone Options ----------------------- */
+endsnippet
+
+snippet super
+${1}.prototype.${2}.apply(this, arguments);
+endsnippet
+
+snippet sc
+${1}.prototype.initialize.apply(this, arguments);
+endsnippet
